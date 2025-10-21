@@ -1,0 +1,86 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+header {
+  box-shadow: 0 2px 8px rgba(155, 151, 181, .2);
+}
+header nav div {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+header nav div img {
+  height: 24px;
+  padding: 8px;
+}
+header nav div ul {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+header nav div ul li {
+  list-style: none;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.card{
+  max-width: 80vw;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(155, 151, 181, .2);
+  padding: 32px 16px;
+  align-content: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 0 0 20px 20px;
+  padding: 8px;
+}
+.contenido img {
+  width: 100%;
+}
+.texto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.read-the-docs {
+  color: #888;
+}
