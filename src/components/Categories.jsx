@@ -1,9 +1,9 @@
 function Categories ({text1, text2, text3}){
     return (
         <ul className="listaMenu">
-            <li>{text1}</li>
-            <li>{text2}</li>
-            <li>{text3}</li>
+            <li> <a href="#">{text1}</a></li>
+            <li><a href="#">{text2}</a></li>
+            <li><a href="#">{text3}</a></li>
         </ul>
     )
 }
