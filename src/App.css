@@ -25,6 +25,12 @@ header nav div ul {
 }
 header nav div ul li {
   list-style: none;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(155, 151, 181, .2);
+}
+a:link, a:visited {
+  color: #FCFCFE;
 }
 .logo {
   height: 6em;
