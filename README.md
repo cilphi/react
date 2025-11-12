@@ -1,6 +1,6 @@
 <section>
   <article>
-    <h1>Primera entrega</h1> 
+    <h1>NavegaLasRutas+Castillo</h1> 
     <h6>Proyecto Ludussados</h6>
   </article>
 </section>
@@ -12,7 +12,7 @@
       <li><b>Alumna:</b> Francisca Castillo</li>
       <li><b>Módulo:</b> React</li>
       <li><b>Comisión:</b> 94525</li>
-      <li><b>Entrega:</b> Preentrega N°1</li>
+      <li><b>Entrega:</b> Preentrega N°2</li>
     </ul>
   </article>
 </section>
