@@ -1,0 +1,21 @@
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    width: 100%;
+    background-color: #fcfcfe;
+    border: 2px solid #ad9d37;
+    border-radius: 16px;
+    margin-top: 24px;
+    padding: 16px;
+}
+section article img {
+    width: 350px;
+}
+section div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: self-start;
+}

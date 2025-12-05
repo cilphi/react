@@ -1,0 +1,26 @@
+.counter {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter p {
+    margin: 0;
+}
+.counter button {
+    color: #fcfcfe;
+}
+
+.sub {
+    background-color: #AD4537;
+}
+
+.add {
+    background-color: #41AD37;
+}
+
+.agree {
+    background-color: #4537AD;
+}
