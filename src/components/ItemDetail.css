@@ -1,4 +1,4 @@
-section {
+.detail {
     display: flex;
     flex-direction: row;
     gap: 16px;
@@ -10,10 +10,10 @@ section {
     margin-top: 24px;
     padding: 16px;
 }
-section article img {
+.detail article img {
     width: 350px;
 }
-section div {
+.detail .details {
     display: flex;
     flex-direction: column;
     gap: 16px;
