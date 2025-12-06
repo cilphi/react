@@ -1,0 +1,12 @@
+.btn img {
+    width: 32px;
+}
+
+.btn span {
+    background-color: #fcfcfe;
+    color: #37ad72; 
+}
+
+.rounded-pill {
+    transform: translate(-50%, -50%);
+}
