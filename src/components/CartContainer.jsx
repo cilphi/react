@@ -3,7 +3,6 @@ import EmptyCart from './EmptyCart'
 import Cart from './Cart'
 
 export default function CartContainer (){
-
     const {cart} = useCart()
 
     if(cart.length < 1){ 

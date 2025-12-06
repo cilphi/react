@@ -1,33 +1,40 @@
+import './ItemCount.css'
 import { useState } from "react"
+import { useCart } from "../hooks/useCart";
+import toast from 'react-hot-toast';
 
-function Counter ({item}){
+
+function ItemCount ({item}){
     const [counter, setCounter] = useState(0);
+    const {addToCart} = useCart();
 
     const handleSubstract = () =>{
         setCounter(counter - 1)
     }
 
     const handleAdd = () =>{
-        setCounter(counter + 1)
+        setCounter(prev => {
+            const stock = item?.stock;
+            if (prev >= stock) {
+                toast.error('Has agregado todo lo que queda, muchas gracias por preferirlo.')
+                return prev
+            }
+            return prev + 1
+        })
     }
 
     const handleCart = () => {
-        addToCart({item, count})
+        addToCart({ ...item, count: counter })
     }
+
     return (
-        <div style={{
-            display:"flex",
-            flexDirection:"row",
-            gap:16,
-            alignContent:"center",
-            justifyContent:"center",
-        }}>
-            <button style={{backgroundColor: "#AD4537",}} onClick={handleSubstract} disabled={counter === 0}>-</button>
+        <div className='counter'>
+            <button className="sub" onClick={handleSubstract} disabled={counter === 0}>-</button>
             <p>{counter}</p>
-            <button style={{backgroundColor: "#41AD37",}} onClick={handleAdd}>+</button>
-            <button style={{backgroundColor: '#4537AD', color:"#fcfcfe",}} onClick={handleCart} disabled={counter === 0}>Agregar</button>
+            <button className="add" onClick={handleAdd} disabled={counter > (item?.stock)}>+</button>
+            <button className="agree" onClick={handleCart} disabled={counter === 0}>Agregar</button>
         </div>
     )
 }
 
-export default Counter
+export default ItemCount
