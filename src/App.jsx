@@ -3,6 +3,9 @@ import './App.css'
 import NavBarContainer from './components/NavBarContainer';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import CartContainer from './components/CartContainer';
+import Checkout from './components/Checkout';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -13,8 +16,10 @@ function App() {
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="/category/:id" element={<ItemListContainer />}/>
-        <Route path="*" element={ <div>Este contenido aún no está disponible. ¡Gracias por el interés!</div> }/>
+        <Route path="/cart" element={ <CartContainer />}/>
+        <Route path="/checkout" element={ <Checkout />}/>
       </Routes>
+      <Toaster position="bottom-center" reverseOrder={false}/>
     </BrowserRouter>
     </>
   );
