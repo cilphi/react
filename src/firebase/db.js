@@ -11,6 +11,7 @@ export const getProducts = async (setItems) => {
         products.push({ ...doc.data(), id: doc.id });
     });
     setItems (products);
+    return products;
 };
 
 export const getCategories = async () => {
@@ -34,6 +35,7 @@ export const getProductsByCategory = async (category, setItems) => {
         products.push({ ...doc.data(), id: doc.id });
     });
     setItems (products);
+    return products;
 };
 
 export const getProduct = async (id, setItem) => {
@@ -41,9 +43,12 @@ export const getProduct = async (id, setItem) => {
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-        setItem({ ...docSnap.data(), id: docSnap.id });
+        const product = { ...docSnap.data(), id: docSnap.id };
+        setItem(product);
+        return product;
     } else {
         console.log("No such document");
+        return null;
     }
 };
 

@@ -1,4 +1,4 @@
-section {
+.cart {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -11,17 +11,44 @@ section {
     padding: 16px;
 }
 
-section div {
+.cart .purchase {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-section div div {
+.cart .purchase .data {
     display: flex;
     flex-direction: row;
     gap: 8px;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     margin: 0; 
+}
+.cart .purchase .data img {
+    width: 48px;
+}
+.cart .purchase .data h5 {
+    margin: 0;
+    width: 350px;
+    text-align: left;
+}
+.cart .purchase .data p {
+    margin: 0;
+}
+.cart .purchase .data button {
+    padding: 2px 8px;
+    margin: 0;
+}
+.cart .summary {
+    margin-top: 48px;
+    padding: 16px;
+    border: 2px solid #ad9d37;
+    border-radius: 16px;
+}
+.cart .summary .cta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
 }
