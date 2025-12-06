@@ -1,0 +1,15 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    text-align: left;
+    background-color: #fcfcfe;
+    color: #3d3a58;
+    border-radius: 16px;
+    gap: 16px;
+}
+
+.success {
+    background-color: #41ad37;
+    border-color: #41ad37; 
+}
